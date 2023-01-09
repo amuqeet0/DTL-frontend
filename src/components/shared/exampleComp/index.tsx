@@ -1,11 +1,11 @@
 // import styles from "./someComp.module.scss";
-import * as React from "react";
-import Box from "@mui/material/Box";
-import TextField from "@mui/material/TextField";
-import { useTheme } from "@mui/material/styles";
+import * as React from 'react'
+import Box from '@mui/material/Box'
+import TextField from '@mui/material/TextField'
+import { useTheme } from '@mui/material/styles'
 
 export default function HomeComp() {
-  const theme = useTheme();
+  const theme = useTheme()
   return (
     <div className="container">
       <Box
@@ -14,9 +14,9 @@ export default function HomeComp() {
           padding: 1,
           width: 1200,
           background: theme.palette.primary.main,
-          "& > :not(style)": {
+          '& > :not(style)': {
             m: 1,
-            width: "25ch",
+            width: '25ch',
           },
         }}
         noValidate
@@ -27,5 +27,5 @@ export default function HomeComp() {
         <TextField id="standard-basic" label="Standard" variant="standard" />
       </Box>
     </div>
-  );
+  )
 }

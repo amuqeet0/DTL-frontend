@@ -1,7 +1,6 @@
-import styles from "./someComp.module.scss";
-import * as React from "react";
-import Box from "@mui/material/Box";
-import TextField from "@mui/material/TextField";
+import * as React from 'react'
+import Box from '@mui/material/Box'
+import TextField from '@mui/material/TextField'
 // import { useTheme } from "@mui/material/styles";
 
 export default function Home() {
@@ -12,5 +11,5 @@ export default function Home() {
         <TextField id="outlined-basic" label="Outlined" variant="outlined" />
       </Box>
     </div>
-  );
+  )
 }
