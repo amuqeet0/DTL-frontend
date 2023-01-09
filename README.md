@@ -1,4 +1,10 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">NextJS Boilerplate</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <a href="https://github.com/abdulmuqeet1/colvert/blob/master/LICENSE" target="_blank">
+    <img alt="License: None" src="https://img.shields.io/github/license/abdulmuqeet1/colvert" />
+  </a>
+</p>
 
 ## Getting Started
 
@@ -28,5 +34,3 @@ To learn more about Next.js, take a look at the following resources:
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [MUI Docs](https://mui.com/material-ui/getting-started/overview/) - Mui library documentation.
 - [Emotion Docs](https://emotion.sh/docs/@emotion/react) - Styling library emotion documentation.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
