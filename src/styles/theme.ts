@@ -7,11 +7,19 @@ declare module '@mui/material/styles' {
     status: {
       danger: string
     }
+    custom: {
+      main: string
+      sec: string
+    }
   }
   // allow configuration using `createTheme`
   interface ThemeOptions {
     status?: {
       danger?: string
+    }
+    custom: {
+      main: string
+      sec: string
     }
   }
 }
@@ -35,6 +43,10 @@ const theme = createTheme({
     error: {
       main: red.A400,
     },
+  },
+  custom: {
+    main: 'red',
+    sec: 'green',
   },
   typography: {
     fontFamily: roboto.style.fontFamily,
