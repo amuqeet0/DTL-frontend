@@ -10,7 +10,13 @@ declare module '@mui/material/styles' {
     custom: {
       main: string
       sec: string
+      bgColor: string
+      borderColor: string
+      blackColor: string
+      whiteColor: string
+      lightFont: string
     }
+    maxWidth: number | string
   }
   // allow configuration using `createTheme`
   interface ThemeOptions {
@@ -20,7 +26,13 @@ declare module '@mui/material/styles' {
     custom: {
       main: string
       sec: string
+      bgColor: string
+      borderColor: string
+      blackColor: string
+      whiteColor: string
+      lightFont: string
     }
+    maxWidth: number | string
   }
 }
 
@@ -44,10 +56,31 @@ const theme = createTheme({
       main: red.A400,
     },
   },
+  breakpoints: {
+    values: {
+      // ? default breakpoints
+      // xs: 0,
+      // sm: 600,
+      // md: 900,
+      // lg: 1200,
+      // xl: 1536,
+      xs: 0,
+      sm: 680,
+      md: 920,
+      lg: 1250,
+      xl: 1420,
+    },
+  },
   custom: {
     main: 'red',
     sec: 'green',
+    bgColor: 'rgba(255, 255, 255, 0.3)',
+    borderColor: '#000',
+    blackColor: '#000',
+    whiteColor: '#fff',
+    lightFont: '#fff',
   },
+  maxWidth: 1920,
   typography: {
     fontFamily: roboto.style.fontFamily,
   },
