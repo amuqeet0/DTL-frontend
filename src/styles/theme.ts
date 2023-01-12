@@ -15,8 +15,9 @@ declare module '@mui/material/styles' {
       blackColor: string
       whiteColor: string
       lightFont: string
+      drawerBgColor: string
     }
-    padding: number | string
+    padding: number
     maxWidth: number | string
   }
   // allow configuration using `createTheme`
@@ -32,8 +33,9 @@ declare module '@mui/material/styles' {
       blackColor: string
       whiteColor: string
       lightFont: string
+      drawerBgColor: string
     }
-    padding: number | string
+    padding: number
     maxWidth: number | string
   }
 }
@@ -81,6 +83,7 @@ const theme = createTheme({
     blackColor: '#000',
     whiteColor: '#fff',
     lightFont: '#fff',
+    drawerBgColor: '#1C1C1C',
   },
   padding: 4,
   maxWidth: 1920,

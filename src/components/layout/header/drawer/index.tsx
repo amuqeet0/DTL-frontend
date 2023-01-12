@@ -2,16 +2,19 @@ import * as React from 'react'
 import Link from 'next/link'
 import { Grid, IconButton } from '@mui/material'
 import { CrossIcon } from 'src/assets/svgs'
+import { Nunito } from '@next/font/google'
 import useStyles from './styles'
 
 interface DrawerType {
   drawerHandler: () => void
 }
 
+const nunito = Nunito({ subsets: ['latin'] })
+
 const Drawer: React.FC<DrawerType> = ({ drawerHandler }: DrawerType) => {
   const { classes } = useStyles()
   return (
-    <Grid container className={classes.DrawerContainer}>
+    <Grid container className={(nunito.className, classes.DrawerContainer)}>
       <Grid className={classes.DrawerTopBar}>
         <Grid>DTL LOGO</Grid>
         <Grid>
@@ -21,8 +24,6 @@ const Drawer: React.FC<DrawerType> = ({ drawerHandler }: DrawerType) => {
         </Grid>
       </Grid>
       <Grid container className={classes.LinksContainer}>
-        {/* <Grid md="auto" className={classes.pageLink}> */}
-        {/* </Grid> */}
         <Link href="/" className={classes.pageLink}>
           ABOUT US
         </Link>
