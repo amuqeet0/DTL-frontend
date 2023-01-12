@@ -16,6 +16,7 @@ declare module '@mui/material/styles' {
       whiteColor: string
       lightFont: string
     }
+    padding: number | string
     maxWidth: number | string
   }
   // allow configuration using `createTheme`
@@ -32,6 +33,7 @@ declare module '@mui/material/styles' {
       whiteColor: string
       lightFont: string
     }
+    padding: number | string
     maxWidth: number | string
   }
 }
@@ -80,6 +82,7 @@ const theme = createTheme({
     whiteColor: '#fff',
     lightFont: '#fff',
   },
+  padding: 4,
   maxWidth: 1920,
   typography: {
     fontFamily: roboto.style.fontFamily,

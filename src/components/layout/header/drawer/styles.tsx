@@ -23,6 +23,20 @@ const useStyles = makeStyles()((theme) => ({
     padding: '2rem 2rem 0 2rem',
     borderBottom: `1px solid ${theme.custom.whiteColor}`,
   },
+  LinksContainer: {
+    // background: theme.custom.whiteColor,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'column',
+  },
+  pageLink: {
+    textDecoration: 'none',
+    color: theme.custom.lightFont,
+    // background: 'red',
+    padding: `0 ${theme.padding}*4`,
+    margin: `0 2rem`,
+  },
 }))
 
 export default useStyles

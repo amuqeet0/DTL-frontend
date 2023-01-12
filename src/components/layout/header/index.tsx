@@ -1,10 +1,12 @@
 import * as React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import Box from '@mui/material/Box'
 import { Grid } from '@mui/material'
 import ButtonComponent from 'src/components/shared/atoms/button'
 import Drawer from './drawer'
 import { HamburgerMenuIcon, SearchIcon } from 'src/assets/svgs'
+import DTLLogo from 'src/assets/svgs/DTLLogo.svg'
 import useStyles from './styles'
 
 const Header: React.FC = () => {
@@ -16,13 +18,19 @@ const Header: React.FC = () => {
   }
 
   return (
-    <Box component="div" className={classes.root}>
+    <Box component="header" className={classes.root}>
       <Grid container className={classes.innerContainer}>
-        <Grid container item sm={4} spacing={2}>
-          <Grid item sm="auto" onClick={drawerHandler}>
+        <Grid
+          container
+          item
+          md={4}
+          spacing={2}
+          className={classes.menuContainer}
+        >
+          <Grid item sm={12} md="auto" onClick={drawerHandler}>
             <HamburgerMenuIcon />
           </Grid>
-          <Grid item sm="auto" xs={0}>
+          <Grid item md={0} lg={8} className={classes.linksContainer}>
             <Link href="/" className={classes.links}>
               <span>I NEED HELP</span>
             </Link>
@@ -31,32 +39,40 @@ const Header: React.FC = () => {
             </Link>
           </Grid>
         </Grid>
-        <Grid item sm={4} className={classes.logoContainer}>
-          DTL Logo
+        <Grid item lg={4} className={classes.logoContainer}>
+          <Image src={DTLLogo} alt="Logo" />
         </Grid>
         <Grid
           container
           item
-          sm={4}
-          spacing={2}
+          lg={4}
+          spacing={1}
           className={classes.buttonsContainer}
         >
-          <Grid item sm="auto" sx={{ background: 'red' }}>
+          <Grid item md={12} lg={2} className={classes.searchBtnContainer}>
             <SearchIcon />
           </Grid>
-          <Grid container item sm={10} className="buttonContainer">
-            <Grid item sm={6} sx={{ background: 'pink' }}>
+          <Grid
+            container
+            item
+            md={0}
+            lg={10}
+            spacing={1}
+            className={classes.LinkButtonsContainer}
+          >
+            <Grid item sm="auto">
               <ButtonComponent
                 size="medium"
                 type="outlined"
                 text="MEET NEW FRIENDS"
               />
             </Grid>
-            <Grid item sm={6} sx={{ background: 'pink' }}>
+            <Grid item sm={6}>
               <ButtonComponent
                 size="medium"
                 type="outlined"
                 text="DONATE NOW"
+                className={classes.donateBtn}
               />
             </Grid>
           </Grid>

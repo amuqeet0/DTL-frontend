@@ -20,28 +20,30 @@ const Drawer: React.FC<DrawerType> = ({ drawerHandler }: DrawerType) => {
           </IconButton>
         </Grid>
       </Grid>
-      <Grid container>
-        <Grid sm={12}>
-          <Link href="/">ABOUT US</Link>
-        </Grid>
-        <Grid sm={12}>
-          <Link href="/">MEET THE TEAM</Link>
-        </Grid>
-        <Grid sm={12}>
-          <Link href="/">REPORT CYBER BULLYING</Link>
-        </Grid>
-        <Grid sm={12}>
-          <Link href="/">CAREERS</Link>
-        </Grid>
-        <Grid sm={12}>
-          <Link href="/">CAMPAIGNS</Link>
-        </Grid>
-        <Grid sm={12}>
-          <Link href="/">PARTNER WITH US</Link>
-        </Grid>
-        <Grid sm={12}>
-          <Link href="/">CONTACT US</Link>
-        </Grid>
+      <Grid container className={classes.LinksContainer}>
+        {/* <Grid md="auto" className={classes.pageLink}> */}
+        {/* </Grid> */}
+        <Link href="/" className={classes.pageLink}>
+          ABOUT US
+        </Link>
+        <Link href="/" className={classes.pageLink}>
+          MEET THE TEAM
+        </Link>
+        <Link href="/" className={classes.pageLink}>
+          REPORT CYBER BULLYING
+        </Link>
+        <Link href="/" className={classes.pageLink}>
+          CAREERS
+        </Link>
+        <Link href="/" className={classes.pageLink}>
+          CAMPAIGNS
+        </Link>
+        <Link href="/" className={classes.pageLink}>
+          PARTNER WITH US
+        </Link>
+        <Link href="/" className={classes.pageLink}>
+          CONTACT US
+        </Link>
       </Grid>
     </Grid>
   )
