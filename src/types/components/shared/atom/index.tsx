@@ -14,3 +14,18 @@ export interface ButtonComponentProps {
   loadingIconClass?: string
   progressLoaderSize?: number
 }
+
+// TODO: redefine href type
+interface Href {
+  pathName: string
+  query: string | { id: string } | { slug: string }
+}
+export interface LinkProps {
+  href: string | Href
+  children: string | React.ReactNode
+  passHref?: boolean
+  prefetch?: boolean
+  replace?: boolean
+  scroll?: boolean
+  className?: string
+}

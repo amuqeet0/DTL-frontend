@@ -85,7 +85,8 @@ const theme = createTheme({
     lightFont: '#fff',
     drawerBgColor: '#1C1C1C',
   },
-  padding: 4,
+  spacing: 4,
+  padding: 4, // ! update it to 16
   maxWidth: 1920,
   typography: {
     fontFamily: roboto.style.fontFamily,

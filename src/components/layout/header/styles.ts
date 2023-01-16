@@ -19,6 +19,9 @@ const useStyles = makeStyles()((theme) => ({
     maxWidth: theme.maxWidth,
     height: 'inherit',
     padding: '0 70px',
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
   },
   menuContainer: {
     display: 'flex',
@@ -45,14 +48,13 @@ const useStyles = makeStyles()((theme) => ({
     justifyContent: 'flex-end',
     flexDirection: 'row',
     flexWrap: 'nowrap',
-    // border: '2px solid yellow',
   },
   searchBtnContainer: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     height: 'inherit',
-    paddingTop: theme.padding,
+    paddingTop: theme.spacing(1),
   },
   LinkButtonsContainer: {
     display: 'flex',

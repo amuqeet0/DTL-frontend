@@ -10,7 +10,7 @@ import DTLLogo from 'src/assets/svgs/DTLLogo.svg'
 import useStyles from './styles'
 
 const Header: React.FC = () => {
-  const [drawerState, setDrawerState] = React.useState(false)
+  const [drawerState, setDrawerState] = React.useState(true)
   const { classes } = useStyles()
 
   const drawerHandler: () => void = (): void => {
@@ -24,13 +24,13 @@ const Header: React.FC = () => {
           container
           item
           md={4}
-          spacing={2}
+          spacing={1}
           className={classes.menuContainer}
         >
-          <Grid item sm={12} md="auto" onClick={drawerHandler}>
+          <Grid item lg="auto" onClick={drawerHandler} sx={{}}>
             <HamburgerMenuIcon />
           </Grid>
-          <Grid item md={0} lg={8} className={classes.linksContainer}>
+          <Grid item lg="auto" className={classes.linksContainer}>
             <Link href="/" className={classes.links}>
               <span>I NEED HELP</span>
             </Link>
