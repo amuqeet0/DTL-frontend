@@ -29,6 +29,10 @@ const useStyles = makeStyles()((theme) => ({
     padding: theme.spacing(8),
     paddingBottom: theme.spacing(0),
     borderBottom: `1px solid ${theme.custom.whiteColor}`,
+    [theme.breakpoints.down('md')]: {
+      padding: `${theme.spacing(4)} ${theme.spacing(1)}`,
+      paddingBottom: theme.spacing(0),
+    },
   },
   LinksContainer: {
     width: '100%',

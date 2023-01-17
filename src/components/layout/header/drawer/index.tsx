@@ -47,11 +47,7 @@ const Drawer: React.FC<DrawerType> = ({ drawerHandler }: DrawerType) => {
         </Grid>
       </Grid>
       <Grid container item sm={12}>
-        <List
-          className={classes.LinksContainer}
-          component="nav"
-          // aria-labelledby="navbar"
-        >
+        <List className={classes.LinksContainer} component="nav">
           <ListItem
             onClick={handleClickINeedHelp}
             className={(classes.pageLink, classes.mobileViewLinks)}
@@ -122,11 +118,7 @@ const Drawer: React.FC<DrawerType> = ({ drawerHandler }: DrawerType) => {
             unmountOnExit
             sx={{ width: '100%' }}
           >
-            <List
-              component="div"
-              disablePadding
-              // sx={{ width: '100%', backgroundColor: 'pink' }}
-            >
+            <List component="div" disablePadding>
               <ListItem className={classes.subMenuLink}>
                 <Link href="/">
                   <ListItemText primary="Find Ways to help" />

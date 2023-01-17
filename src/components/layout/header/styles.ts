@@ -18,10 +18,13 @@ const useStyles = makeStyles()((theme) => ({
     width: '100%',
     maxWidth: theme.maxWidth,
     height: 'inherit',
-    padding: '0 70px',
+    padding: `0 ${theme.spacing(16)}`,
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
+    [theme.breakpoints.down('md')]: {
+      padding: `0 ${theme.spacing(4)}`,
+    },
   },
   menuContainer: {
     display: 'flex',
@@ -29,6 +32,9 @@ const useStyles = makeStyles()((theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
     flexWrap: 'nowrap',
+    [theme.breakpoints.down('md')]: {
+      justifyContent: 'flex-start',
+    },
   },
   linksContainer: {
     [theme.breakpoints.down('md')]: {
@@ -52,7 +58,7 @@ const useStyles = makeStyles()((theme) => ({
   searchBtnContainer: {
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-end',
     height: 'inherit',
     paddingTop: theme.spacing(1),
   },
@@ -94,13 +100,9 @@ const useStyles = makeStyles()((theme) => ({
     borderBottom: `1px solid ${theme.custom.whiteColor}`,
   },
   donateBtn: {
-    // width: '114px',
-    // height: '22px',
     fontFamily: 'Nunito Sans',
     fontStyle: 'normal',
     fontWeight: 700,
-    // fontSize: 16,
-    // lineHeight: 22,
     textAlign: 'center',
     color: theme.custom.lightFont,
     backgroundColor: theme.custom.blackColor,
