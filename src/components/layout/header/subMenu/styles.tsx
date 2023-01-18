@@ -57,6 +57,10 @@ const useStyles = makeStyles()((theme) => ({
   },
   endCardTextColor: {
     color: theme.custom.lightFont,
+    ':hover': {
+      color: theme.custom.blackColor,
+      background: `linear-gradient(106.87deg, #DC86A0 2.25%, #A0C0E9 28.43%, #EAA539 54.12%, #848CC9 81.29%, #63D169 97.09%)`,
+    },
   },
 }))
 

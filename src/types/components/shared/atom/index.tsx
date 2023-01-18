@@ -13,6 +13,11 @@ export interface ButtonComponentProps {
   loading?: boolean
   loadingIconClass?: string
   progressLoaderSize?: number
+  gutter?: boolean
+  gutterLeft?: boolean
+  gutterRight?: boolean
+  gutterTop?: boolean
+  gutterBottom?: boolean
 }
 
 // TODO: redefine href type

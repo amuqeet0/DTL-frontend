@@ -1,36 +1,25 @@
 import React from 'react'
 import SubMenuCard from './subMenuCard'
-import mixins from 'src/styles/mixins'
 import useStyles from './styles'
 
 const ItsAnEmergencyCard: React.FC = () => {
   const { classes } = useStyles()
-  const { classes: mixinsStyles } = mixins()
   return (
     <SubMenuCard
       text={'ITS AN EMERGENCY'}
       route={'/'}
-      className={
-        (classes.endCard,
-        classes.endCardTextColor,
-        mixinsStyles.rainbowBgHoverEffect)
-      }
+      className={(classes.endCard, classes.endCardTextColor)}
     />
   )
 }
 
 const DonateNowCard: React.FC = () => {
   const { classes } = useStyles()
-  const { classes: mixinsStyles } = mixins()
   return (
     <SubMenuCard
       text={'DONATE NOW'}
       route={'/'}
-      className={
-        (classes.endCard,
-        classes.endCardTextColor,
-        mixinsStyles.rainbowBgHoverEffect)
-      }
+      className={(classes.endCard, classes.endCardTextColor)}
     />
   )
 }

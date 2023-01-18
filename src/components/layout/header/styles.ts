@@ -20,19 +20,17 @@ const useStyles = makeStyles()((theme) => ({
     width: '100%',
     maxWidth: theme.maxWidth,
     height: 'inherit',
-    padding: `0 ${theme.spacing(16)}`,
-    display: 'flex',
-    flexDirection: 'row',
-    flexWrap: 'wrap',
+    maxHeight: '87px',
+    padding: theme.spacing(0, 16),
     [theme.breakpoints.down('md')]: {
-      padding: `0 ${theme.spacing(4)}`,
+      padding: theme.spacing(0, 4),
     },
   },
   menuContainer: {
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     flexWrap: 'nowrap',
     [theme.breakpoints.down('md')]: {
       justifyContent: 'flex-start',
@@ -40,51 +38,47 @@ const useStyles = makeStyles()((theme) => ({
   },
   logoContainer: {
     height: '87px',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    display: 'grid',
+    placeContent: 'center',
   },
   buttonsContainer: {
-    height: 'inherit',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-end',
     flexDirection: 'row',
     flexWrap: 'nowrap',
   },
-  searchBtnContainer: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'flex-end',
-    height: 'inherit',
-    // paddingTop: theme.spacing(1),
+  searchBtn: {
+    marginRight: theme.spacing(6),
   },
-  LinkButtonsContainer: {
+  buttonBox: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-end',
     flexDirection: 'row',
+    flexWrap: 'nowrap',
     [theme.breakpoints.down('md')]: {
       display: 'none',
     },
   },
   linksContainer: {
-    height: '100%',
-    padding: theme.spacing(0, 4),
-    marginLeft: theme.spacing(8),
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
     [theme.breakpoints.down('md')]: {
       display: 'none',
     },
   },
   links: {
+    display: 'inline-block',
     height: '87px',
-    textDecoration: 'none',
-    color: '#000',
+    lineHeight: '87px',
     span: {
       display: 'inline-block',
-      lineHeight: '86px',
       height: '100%',
       padding: theme.spacing(0, 4),
+      color: theme.custom.blackColor,
     },
   },
   addBlueBgColor: {
@@ -121,6 +115,7 @@ const useStyles = makeStyles()((theme) => ({
     fontStyle: 'normal',
     fontWeight: 700,
     textAlign: 'center',
+    marginLeft: theme.spacing(4),
     color: theme.custom.lightFont,
     backgroundColor: theme.custom.blackColor,
   },
@@ -136,14 +131,6 @@ const useStyles = makeStyles()((theme) => ({
     paddingTop: theme.spacing(3),
     backgroundColor: theme.custom.blackColor,
     color: theme.custom.lightFont,
-  },
-  '@keyframes backgroundMotion': {
-    '0%': {
-      backgroundColor: 'aqua',
-    },
-    '100%': {
-      backgroundColor: '#FF97C1',
-    },
   },
 }))
 
