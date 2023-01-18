@@ -10,7 +10,11 @@ const ItsAnEmergencyCard: React.FC = () => {
     <SubMenuCard
       text={'ITS AN EMERGENCY'}
       route={'/'}
-      className={(classes.cardBorder, mixinsStyles.rainbowBgHoverEffect)}
+      className={
+        (classes.endCard,
+        classes.endCardTextColor,
+        mixinsStyles.rainbowBgHoverEffect)
+      }
     />
   )
 }
@@ -22,7 +26,11 @@ const DonateNowCard: React.FC = () => {
     <SubMenuCard
       text={'DONATE NOW'}
       route={'/'}
-      className={(classes.cardBorder, mixinsStyles.rainbowBgHoverEffect)}
+      className={
+        (classes.endCard,
+        classes.endCardTextColor,
+        mixinsStyles.rainbowBgHoverEffect)
+      }
     />
   )
 }

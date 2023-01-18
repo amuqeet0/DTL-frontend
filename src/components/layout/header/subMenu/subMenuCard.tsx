@@ -13,12 +13,14 @@ interface SubMenuCardType {
   route?: string
   endCard?: React.ReactNode
   className?: string
+  textStyling?: string
 }
 
 const SubMenuCard: React.FC<SubMenuCardType> = ({
   text,
   route = '',
   className,
+  textStyling,
 }: SubMenuCardType) => {
   const { classes } = useStyles()
 
@@ -32,7 +34,7 @@ const SubMenuCard: React.FC<SubMenuCardType> = ({
           <Typography
             variant="body1"
             component="h2"
-            className={classes.cardText}
+            className={(classes.cardText, textStyling)}
           >
             {text}
           </Typography>
@@ -82,6 +84,11 @@ const useStyles = makeStyles()((theme) => ({
   },
   iconContainer: {},
   cardText: {
+    // fontFamily: 'Nunito Sans',
+    fontStyle: 'normal',
+    fontWeight: 800,
+    fontSize: 18,
+    textTransform: 'uppercase',
     height: 'fit-content',
     color: theme.custom.blackColor,
   },

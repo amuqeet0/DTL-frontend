@@ -18,6 +18,7 @@ interface SubMenuType {
   menuDataList?: MenuData[]
   button?: React.ReactNode | JSX.Element
   endCard?: React.ReactNode | JSX.Element
+  className?: string
 }
 
 const SubMenu: React.FC<SubMenuType> = ({
@@ -26,11 +27,12 @@ const SubMenu: React.FC<SubMenuType> = ({
   menuDataList,
   button,
   endCard,
+  className,
 }: SubMenuType) => {
   const { classes } = useStyles()
 
   return (
-    <Grid container className={clsx(nunito.className, classes.root)}>
+    <Grid container className={clsx(nunito.className, classes.root, className)}>
       <Grid container item sm={5.5} className={classes.titleContainer}>
         <Typography
           variant="h3"

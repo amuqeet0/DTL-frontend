@@ -3,7 +3,7 @@ import { makeStyles } from 'tss-react/mui'
 const useStyles = makeStyles()((theme) => ({
   root: {
     width: '100%',
-    height: '87px',
+    height: 'auto',
     position: 'fixed',
     left: 0,
     right: 0,
@@ -13,7 +13,8 @@ const useStyles = makeStyles()((theme) => ({
     justifyContent: 'center',
     background: theme.custom.bgColor,
     backdropFilter: 'blur(47.5px)',
-    border: `1px solid ${theme.custom.blackColor}`,
+    borderTop: `1px solid ${theme.custom.blackColor}`,
+    borderBottom: `1px solid ${theme.custom.blackColor}`,
   },
   innerContainer: {
     width: '100%',
@@ -38,7 +39,7 @@ const useStyles = makeStyles()((theme) => ({
     },
   },
   logoContainer: {
-    height: '100%',
+    height: '87px',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -56,7 +57,7 @@ const useStyles = makeStyles()((theme) => ({
     alignItems: 'center',
     justifyContent: 'flex-end',
     height: 'inherit',
-    paddingTop: theme.spacing(1),
+    // paddingTop: theme.spacing(1),
   },
   LinkButtonsContainer: {
     display: 'flex',

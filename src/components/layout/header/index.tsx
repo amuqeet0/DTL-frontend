@@ -18,7 +18,6 @@ const Header: React.FC = () => {
   const [iNeedHelpOpen, setINeedHelpOpen] = React.useState(false)
   const [iWantToHelpOpen, setIWantToHelpOpen] = React.useState(false)
   const { classes } = useStyles()
-  // const { classes: mixinsStyles } = mixins()
 
   const drawerHandler: () => void = (): void => {
     setDrawerState(!drawerState)
@@ -112,6 +111,7 @@ const Header: React.FC = () => {
           heading="I NEED HELP"
           subHeading="From bullying and body image to sexting and anxiety, we’ve pretty much got your back. Our experts have written hundreds of support guides, available to browse now."
           menuDataList={iNeedHelpSubMenuData}
+          className={classes.addBlueBgColor}
           button={
             <ButtonComponent
               type={'contained'}
@@ -127,6 +127,7 @@ const Header: React.FC = () => {
           heading="I WANT TO HELP"
           subHeading="From bullying and body image to sexting and anxiety, we’ve pretty much got your back. Our experts have written hundreds of support guides, available to browse now."
           menuDataList={iWantToHelpSubMenuData}
+          className={classes.addPinkBgColor}
           button={
             <ButtonComponent
               type={'contained'}

@@ -6,9 +6,11 @@ const useStyles = makeStyles()((theme) => ({
     top: 88,
     left: 0,
     right: 0,
-    width: '100%',
+    width: '100vw',
     height: '308px',
-    background: theme.custom.blueBgColor,
+    [theme.breakpoints.down('md')]: {
+      display: 'none',
+    },
   },
   titleContainer: {
     position: 'relative',
@@ -42,11 +44,19 @@ const useStyles = makeStyles()((theme) => ({
     borderBottom: '1px solid black',
     borderRight: '1px solid black',
   },
+  endCard: {
+    border: 'none',
+    color: 'white',
+    backgroundColor: theme.custom.blackColor,
+  },
   emergencyCard: {
     backgroundColor: 'black',
     color: 'white',
     opacity: '1',
     zIndex: 1,
+  },
+  endCardTextColor: {
+    color: theme.custom.lightFont,
   },
 }))
 
