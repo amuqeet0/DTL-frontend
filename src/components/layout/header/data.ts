@@ -29,4 +29,35 @@ const iNeedHelpSubMenuData = [
   },
 ]
 
-export default iNeedHelpSubMenuData
+const iWantToHelpSubMenuData = [
+  {
+    title: 'find ways to help',
+    route: '/',
+  },
+  {
+    title: 'For Brands',
+    route: '/',
+  },
+  {
+    title: 'Fundraise',
+    route: '/',
+  },
+  {
+    title: 'Join our team',
+    route: '/',
+  },
+  {
+    title: 'Volunteer',
+    route: '/',
+  },
+  {
+    title: 'Donate Skills',
+    route: '/',
+  },
+  {
+    title: 'Become an ambassador',
+    route: '/',
+  },
+]
+
+export { iNeedHelpSubMenuData, iWantToHelpSubMenuData }

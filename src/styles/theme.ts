@@ -17,6 +17,7 @@ declare module '@mui/material/styles' {
       lightFont: string
       drawerBgColor: string
       blueBgColor: string
+      pinkBgColor: string
     }
     padding: number
     maxWidth: number | string
@@ -36,6 +37,7 @@ declare module '@mui/material/styles' {
       lightFont: string
       drawerBgColor: string
       blueBgColor: string
+      pinkBgColor: string
     }
     padding: number
     maxWidth: number | string
@@ -87,6 +89,7 @@ const theme = createTheme({
     lightFont: '#fff',
     drawerBgColor: '#1C1C1C',
     blueBgColor: '#A0C0E9',
+    pinkBgColor: '#DC86A0',
   },
   spacing: 4,
   padding: 4, // ! update it to 16

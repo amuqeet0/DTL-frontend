@@ -1,7 +1,6 @@
 import * as React from 'react'
 import clsx from 'clsx'
 import { Grid, Typography } from '@mui/material'
-import { ButtonComponent } from 'src/components/shared/atoms'
 import SubMenuCard from './subMenuCard'
 import { Nunito } from '@next/font/google'
 import useStyles from './styles'
@@ -17,13 +16,16 @@ interface SubMenuType {
   heading: string
   subHeading?: string
   menuDataList?: MenuData[]
-  Button?: React.ReactNode | JSX.Element
+  button?: React.ReactNode | JSX.Element
+  endCard?: React.ReactNode | JSX.Element
 }
 
 const SubMenu: React.FC<SubMenuType> = ({
   heading,
   subHeading,
   menuDataList,
+  button,
+  endCard,
 }: SubMenuType) => {
   const { classes } = useStyles()
 
@@ -44,22 +46,22 @@ const SubMenu: React.FC<SubMenuType> = ({
         >
           {subHeading}
         </Typography>
-        <ButtonComponent
-          type={'contained'}
-          text={'GET HELP NOW'}
-          className={classes.getHelpBtn}
-        />
+        {button}
       </Grid>
-      <Grid container item sm={6.5}>
+      <Grid container item sm={6.5} className={classes.subMenuContainer}>
         {menuDataList?.map((menu: MenuData, idx: number) => {
           return (
-            <Grid item sm={6} key={idx}>
-              <SubMenuCard text={menu.title} route={menu.route} />
+            <Grid item sm={6} key={idx} className={classes.cardGrid}>
+              <SubMenuCard
+                text={menu.title}
+                route={menu.route}
+                className={classes.cardBorder}
+              />
             </Grid>
           )
         })}
-        <Grid item sm={6} sx={{ backgroundColor: 'black', opacity: '1' }}>
-          <SubMenuCard text={'ITS AN EMERGENCY'} route={'/'} />
+        <Grid item sm={6} className={classes.emergencyCard}>
+          {endCard}
         </Grid>
       </Grid>
     </Grid>

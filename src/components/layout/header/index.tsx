@@ -6,22 +6,32 @@ import { Grid } from '@mui/material'
 import SubMenu from './subMenu'
 import ButtonComponent from 'src/components/shared/atoms/button'
 import Drawer from './drawer'
+import { ItsAnEmergencyCard, DonateNowCard } from './subMenu/endCard'
 import { HamburgerMenuIcon, SearchIcon } from 'src/assets/svgs'
 import DTLLogo from 'src/assets/svgs/DTLLogo.svg'
+import { iNeedHelpSubMenuData, iWantToHelpSubMenuData } from './data'
+import clsx from 'clsx'
 import useStyles from './styles'
-import iNeedHelpSubMenuData from './data'
 
 const Header: React.FC = () => {
   const [drawerState, setDrawerState] = React.useState(false)
   const [iNeedHelpOpen, setINeedHelpOpen] = React.useState(false)
+  const [iWantToHelpOpen, setIWantToHelpOpen] = React.useState(false)
   const { classes } = useStyles()
+  // const { classes: mixinsStyles } = mixins()
 
   const drawerHandler: () => void = (): void => {
     setDrawerState(!drawerState)
   }
 
   const iNeedHelpHandler: () => void = (): void => {
+    setIWantToHelpOpen(false)
     setINeedHelpOpen(!iNeedHelpOpen)
+  }
+
+  const iWantToHelpHandler: () => void = (): void => {
+    setINeedHelpOpen(false)
+    setIWantToHelpOpen(!iWantToHelpOpen)
   }
 
   return (
@@ -40,10 +50,18 @@ const Header: React.FC = () => {
           </Grid>
           <Grid item sm={0} lg="auto" className={classes.linksContainer}>
             <Link href="/" className={classes.links} onClick={iNeedHelpHandler}>
-              <span>I NEED HELP</span>
+              <span className={clsx(iNeedHelpOpen && classes.addBlueBgColor)}>
+                I NEED HELP
+              </span>
             </Link>
-            <Link href="/" className={classes.links}>
-              <span>I WANT TO HELP</span>
+            <Link
+              href="/"
+              className={classes.links}
+              onClick={iWantToHelpHandler}
+            >
+              <span className={clsx(iWantToHelpOpen && classes.addPinkBgColor)}>
+                I WANT TO HELP
+              </span>
             </Link>
           </Grid>
         </Grid>
@@ -94,6 +112,29 @@ const Header: React.FC = () => {
           heading="I NEED HELP"
           subHeading="From bullying and body image to sexting and anxiety, we’ve pretty much got your back. Our experts have written hundreds of support guides, available to browse now."
           menuDataList={iNeedHelpSubMenuData}
+          button={
+            <ButtonComponent
+              type={'contained'}
+              text={'GET HELP NOW'}
+              className={classes.getHelpBtn}
+            />
+          }
+          endCard={<ItsAnEmergencyCard />}
+        />
+      ) : null}
+      {iWantToHelpOpen ? (
+        <SubMenu
+          heading="I WANT TO HELP"
+          subHeading="From bullying and body image to sexting and anxiety, we’ve pretty much got your back. Our experts have written hundreds of support guides, available to browse now."
+          menuDataList={iWantToHelpSubMenuData}
+          button={
+            <ButtonComponent
+              type={'contained'}
+              text={'WAYS TO GET INVOLVE'}
+              className={classes.getHelpBtn}
+            />
+          }
+          endCard={<DonateNowCard />}
         />
       ) : null}
     </Box>

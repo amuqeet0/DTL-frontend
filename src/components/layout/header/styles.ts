@@ -13,6 +13,7 @@ const useStyles = makeStyles()((theme) => ({
     justifyContent: 'center',
     background: theme.custom.bgColor,
     backdropFilter: 'blur(47.5px)',
+    border: `1px solid ${theme.custom.blackColor}`,
   },
   innerContainer: {
     width: '100%',
@@ -34,11 +35,6 @@ const useStyles = makeStyles()((theme) => ({
     flexWrap: 'nowrap',
     [theme.breakpoints.down('md')]: {
       justifyContent: 'flex-start',
-    },
-  },
-  linksContainer: {
-    [theme.breakpoints.down('md')]: {
-      display: 'none',
     },
   },
   logoContainer: {
@@ -71,12 +67,31 @@ const useStyles = makeStyles()((theme) => ({
       display: 'none',
     },
   },
+  linksContainer: {
+    height: '100%',
+    padding: theme.spacing(0, 4),
+    marginLeft: theme.spacing(8),
+    [theme.breakpoints.down('md')]: {
+      display: 'none',
+    },
+  },
   links: {
+    height: '87px',
     textDecoration: 'none',
     color: '#000',
-    padding: '0 16px',
+    span: {
+      display: 'inline-block',
+      lineHeight: '86px',
+      height: '100%',
+      padding: theme.spacing(0, 4),
+    },
   },
-
+  addBlueBgColor: {
+    backgroundColor: theme.custom.blueBgColor,
+  },
+  addPinkBgColor: {
+    backgroundColor: theme.custom.pinkBgColor,
+  },
   DrawerContainer: {
     position: 'fixed',
     top: 0,
@@ -85,7 +100,7 @@ const useStyles = makeStyles()((theme) => ({
     right: 0,
     width: '100vw',
     height: '100vh',
-    padding: '0 1rem',
+    padding: theme.spacing(0, 4),
     color: theme.custom.lightFont,
     backgroundColor: theme.custom.blackColor,
   },
@@ -96,7 +111,8 @@ const useStyles = makeStyles()((theme) => ({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    padding: '2rem 2rem 0 2rem',
+    padding: theme.spacing(8),
+    paddingBottom: 0,
     borderBottom: `1px solid ${theme.custom.whiteColor}`,
   },
   donateBtn: {
@@ -106,6 +122,27 @@ const useStyles = makeStyles()((theme) => ({
     textAlign: 'center',
     color: theme.custom.lightFont,
     backgroundColor: theme.custom.blackColor,
+  },
+  cardBorder: {
+    border: 'none',
+    borderBottom: '1px solid black',
+    borderRight: '1px solid black',
+  },
+  getHelpBtn: {
+    width: 'fit-content',
+    minWidth: 176,
+    height: 50,
+    paddingTop: theme.spacing(3),
+    backgroundColor: theme.custom.blackColor,
+    color: theme.custom.lightFont,
+  },
+  '@keyframes backgroundMotion': {
+    '0%': {
+      backgroundColor: 'aqua',
+    },
+    '100%': {
+      backgroundColor: '#FF97C1',
+    },
   },
 }))
 

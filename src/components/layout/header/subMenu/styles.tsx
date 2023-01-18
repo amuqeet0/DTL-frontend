@@ -29,8 +29,24 @@ const useStyles = makeStyles()((theme) => ({
   getHelpBtn: {
     width: 176,
     height: 50,
-    backgroundColor: theme.custom.bgColor,
+    paddingTop: theme.spacing(3),
+    backgroundColor: theme.custom.blackColor,
     color: theme.custom.lightFont,
+  },
+  subMenuContainer: {
+    borderLeft: '1px solid black',
+  },
+  cardGrid: {},
+  cardBorder: {
+    border: 'none',
+    borderBottom: '1px solid black',
+    borderRight: '1px solid black',
+  },
+  emergencyCard: {
+    backgroundColor: 'black',
+    color: 'white',
+    opacity: '1',
+    zIndex: 1,
   },
 }))
 

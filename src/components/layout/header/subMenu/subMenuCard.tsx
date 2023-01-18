@@ -11,6 +11,7 @@ const nunito = Nunito({ subsets: ['latin'] })
 interface SubMenuCardType {
   text: string
   route?: string
+  endCard?: React.ReactNode
   className?: string
 }
 
@@ -22,8 +23,11 @@ const SubMenuCard: React.FC<SubMenuCardType> = ({
   const { classes } = useStyles()
 
   return (
-    <Grid container className={clsx(nunito.className, classes.root, className)}>
-      <Link href={route} className={classes.linkContainer}>
+    <Link href={route} className={classes.root}>
+      <Grid
+        container
+        className={clsx(nunito.className, classes.linkContainer, className)}
+      >
         <Grid item sm={10} className={classes.cardContentContainer}>
           <Typography
             variant="body1"
@@ -33,28 +37,16 @@ const SubMenuCard: React.FC<SubMenuCardType> = ({
             {text}
           </Typography>
         </Grid>
-        <Grid item sm={2}>
+        <Grid item sm={2} className={classes.iconContainer}>
           <LongArrowIcon />
         </Grid>
-      </Link>
-    </Grid>
+      </Grid>
+    </Link>
   )
 }
 
 const useStyles = makeStyles()((theme) => ({
   root: {
-    width: '100%',
-    height: '100%',
-    background: theme.custom.bgColor,
-    borderCollapse: 'collapse',
-    border: '1px solid black',
-    padding: theme.spacing(2),
-    color: 'black',
-    ':hover': {
-      background: theme.custom.whiteColor,
-    },
-  },
-  linkContainer: {
     width: '100%',
     height: '100%',
     display: 'flex',
@@ -63,19 +55,34 @@ const useStyles = makeStyles()((theme) => ({
     flexDirection: 'row',
     flexWrap: 'nowrap',
     cursor: 'pointer',
-    // background: 'red',
     textAlign: 'center',
   },
-  cardContentContainer: {
-    height: 'fit-content',
+  linkContainer: {
+    width: '100%',
+    height: '100%',
     display: 'flex',
     alignItem: 'center',
     justifyContent: 'space-between',
     flexDirection: 'row',
-    flexWrap: 'nowrap',
-    // background: 'pink',
+    background: theme.custom.bgColor,
+    border: `1px solid ${theme.custom.blackColor}`,
+    padding: theme.spacing(2),
+    paddingTop: theme.spacing(7),
+    color: theme.custom.blackColor,
+    ':hover': {
+      background: theme.custom.whiteColor,
+    },
   },
+  cardContentContainer: {
+    lineHeight: 22,
+    display: 'flex',
+    alignItem: 'center',
+    justifyContent: 'flex-start',
+    textAlign: 'center',
+  },
+  iconContainer: {},
   cardText: {
+    height: 'fit-content',
     color: theme.custom.blackColor,
   },
 }))
