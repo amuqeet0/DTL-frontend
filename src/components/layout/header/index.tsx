@@ -40,7 +40,12 @@ const Header: React.FC = () => {
     <Box component="header" className={classes.root}>
       <Grid container className={classes.innerContainer}>
         <Grid container item xs={5} md={5} className={classes.menuContainer}>
-          <Grid item md={1} onClick={drawerHandler}>
+          <Grid
+            item
+            md={1}
+            onClick={drawerHandler}
+            className={classes.hamburgerMenuIcon}
+          >
             <HamburgerMenuIcon />
           </Grid>
           <Grid item md={11} className={classes.linksContainer}>

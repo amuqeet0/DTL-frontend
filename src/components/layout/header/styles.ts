@@ -36,6 +36,9 @@ const useStyles = makeStyles()((theme) => ({
       justifyContent: 'flex-start',
     },
   },
+  hamburgerMenuIcon: {
+    cursor: 'pointer',
+  },
   logoContainer: {
     height: '87px',
     display: 'grid',
@@ -123,6 +126,9 @@ const useStyles = makeStyles()((theme) => ({
     marginLeft: theme.spacing(4),
     color: theme.custom.lightFont,
     backgroundColor: theme.custom.blackColor,
+    ':hover': {
+      background: theme.custom.blackColor,
+    },
   },
   cardBorder: {
     border: 'none',
