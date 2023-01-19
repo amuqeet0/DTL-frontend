@@ -6,24 +6,24 @@ import Select, { SelectChangeEvent } from '@mui/material/Select'
 import { makeStyles } from 'tss-react/mui'
 
 const SelectLanguage: React.FC = () => {
-  const [age, setAge] = React.useState('🇬🇧 En')
+  const [lang, setLang] = React.useState('🇬🇧 En')
   const { classes } = useStyles()
   const handleChange = (event: SelectChangeEvent) => {
-    setAge(event.target.value as string)
+    setLang(event.target.value as string)
   }
 
   return (
     <Box className={classes.root}>
       <FormControl fullWidth sx={{ border: 'none' }}>
         <Select
-          value={age}
+          value={lang}
           variant="standard"
           onChange={handleChange}
           className={classes.selectField}
         >
-          <MenuItem value={'🇬🇧 En'}>🇬🇧 En</MenuItem>
-          <MenuItem value={'🇪🇸 Es'}>🇪🇸 Es</MenuItem>
-          <MenuItem value={'🇬🇧 En'}>🇬🇧 En</MenuItem>
+          <MenuItem value={'🇬🇧 En'}>🇬🇧 English</MenuItem>
+          <MenuItem value={'🇪🇸 Es'}>🇪🇸 Espanol</MenuItem>
+          <MenuItem value={'🇬🇧 En'}>🇬🇧 English</MenuItem>
         </Select>
       </FormControl>
     </Box>
