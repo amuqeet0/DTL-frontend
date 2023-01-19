@@ -49,7 +49,12 @@ const useStyles = makeStyles()((theme) => ({
     flexWrap: 'nowrap',
   },
   searchBtn: {
-    marginRight: theme.spacing(6),
+    marginRight: theme.spacing(1),
+  },
+  intlBox: {
+    [theme.breakpoints.down('md')]: {
+      display: 'none',
+    },
   },
   buttonBox: {
     display: 'flex',

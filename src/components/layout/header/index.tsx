@@ -8,7 +8,6 @@ import ButtonComponent from 'src/components/shared/atoms/button'
 import Drawer from './drawer'
 import { ItsAnEmergencyCard, DonateNowCard } from './subMenu/endCard'
 import SelectLanguage from './intlMenu'
-// import { ItsAnEmergencyCard } from './subMenu/endCard'
 import { HamburgerMenuIcon, SearchIcon } from 'src/assets/svgs'
 import DTLLogo from 'src/assets/svgs/DTLLogo.svg'
 import { iNeedHelpSubMenuData, iWantToHelpSubMenuData } from './data'
@@ -68,7 +67,9 @@ const Header: React.FC = () => {
           <IconButton className={classes.searchBtn}>
             <SearchIcon />
           </IconButton>
-          <SelectLanguage />
+          <Box className={classes.intlBox}>
+            <SelectLanguage />
+          </Box>
           <Box className={classes.buttonBox}>
             <ButtonComponent
               size="medium"

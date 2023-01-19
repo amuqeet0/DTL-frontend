@@ -5,17 +5,6 @@ import FormControl from '@mui/material/FormControl'
 import Select, { SelectChangeEvent } from '@mui/material/Select'
 import { makeStyles } from 'tss-react/mui'
 
-// const currencies = [
-//   {
-//     value: 'English',
-//     label: '🇬🇧',
-//   },
-//   {
-//     value: 'Espanol',
-//     label: '🇪🇸',
-//   },
-// ]
-
 const SelectLanguage: React.FC = () => {
   const [age, setAge] = React.useState('🇬🇧 En')
   const { classes } = useStyles()
@@ -47,10 +36,18 @@ const useStyles = makeStyles()((theme) => ({
   },
   selectField: {
     width: '80px',
-    borderBottom: 'none',
-  },
-  '.MuiSelect-standard': {
-    border: 'none !important',
+    border: 'none',
+    outline: 'none',
+    '&:before': {
+      content: '""',
+      border: 'none',
+    },
+    '&:hover': {
+      border: ['none', '!important'],
+    },
+    '.MuiInputBase-root:hover': {
+      border: 'none',
+    },
   },
   '& .MuiInput-root': {
     '&:before, :after, :hover:not(.Mui-disabled):before': {
