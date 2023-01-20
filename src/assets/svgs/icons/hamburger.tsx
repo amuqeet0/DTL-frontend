@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function HamburgerMenuIcon(): JSX.Element {
+const HamburgerMenuIcon: React.FC = () => {
   return (
     <svg
       width="26"
@@ -21,3 +21,5 @@ export default function HamburgerMenuIcon(): JSX.Element {
     </svg>
   )
 }
+
+export default HamburgerMenuIcon

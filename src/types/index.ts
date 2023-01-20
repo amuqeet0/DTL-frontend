@@ -1,3 +1,3 @@
-import { ButtonComponentProps } from './components/shared/atom'
+import { ButtonComponentProps, LinkProps } from './components/shared/atom'
 
-export type { ButtonComponentProps }
+export type { ButtonComponentProps, LinkProps }

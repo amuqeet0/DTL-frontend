@@ -15,7 +15,11 @@ declare module '@mui/material/styles' {
       blackColor: string
       whiteColor: string
       lightFont: string
+      drawerBgColor: string
+      blueBgColor: string
+      pinkBgColor: string
     }
+    padding: number
     maxWidth: number | string
   }
   // allow configuration using `createTheme`
@@ -31,7 +35,11 @@ declare module '@mui/material/styles' {
       blackColor: string
       whiteColor: string
       lightFont: string
+      drawerBgColor: string
+      blueBgColor: string
+      pinkBgColor: string
     }
+    padding: number
     maxWidth: number | string
   }
 }
@@ -79,7 +87,12 @@ const theme = createTheme({
     blackColor: '#000',
     whiteColor: '#fff',
     lightFont: '#fff',
+    drawerBgColor: '#1C1C1C',
+    blueBgColor: '#A0C0E9',
+    pinkBgColor: '#DC86A0',
   },
+  spacing: 4,
+  padding: 4, // ! update it to 16
   maxWidth: 1920,
   typography: {
     fontFamily: roboto.style.fontFamily,

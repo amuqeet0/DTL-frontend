@@ -17,6 +17,11 @@ const ButtonComponent: React.FC<ButtonComponentProps> = (
     size = 'large',
     startIcon,
     loading = false,
+    gutter = false,
+    gutterLeft = false,
+    gutterRight = false,
+    gutterTop = false,
+    gutterBottom = false,
   } = props
 
   const { classes } = useStyles()
@@ -25,7 +30,15 @@ const ButtonComponent: React.FC<ButtonComponentProps> = (
     <Button
       size={size}
       variant={type}
-      className={clsx(classes.root, className)}
+      className={clsx(
+        classes.root,
+        gutter && classes.gutter,
+        gutterLeft && classes.gutterLeft,
+        gutterRight && classes.gutterRight,
+        gutterTop && classes.gutterTop,
+        gutterBottom && classes.gutterBottom,
+        className
+      )}
       type={isSubmitBtn ? 'submit' : 'button'}
       disabled={disabled ?? loading}
       onClick={onClick}
@@ -44,9 +57,23 @@ const useStyles = makeStyles()((theme) => ({
     alignItems: 'flex-start',
     color: theme.custom.blackColor,
     background: theme.custom.bgColor,
-
     border: `1px solid ${theme.custom.borderColor}`,
     borderRadius: '30.5px',
+  },
+  gutter: {
+    margin: theme.spacing(2),
+  },
+  gutterLeft: {
+    marginLeft: theme.spacing(2),
+  },
+  gutterRight: {
+    marginRight: theme.spacing(2),
+  },
+  gutterTop: {
+    marginTop: theme.spacing(2),
+  },
+  gutterBottom: {
+    marginBottom: theme.spacing(2),
   },
 }))
 

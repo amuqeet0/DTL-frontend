@@ -3,33 +3,98 @@ import { makeStyles } from 'tss-react/mui'
 const useStyles = makeStyles()((theme) => ({
   root: {
     width: '100%',
-    height: '87px',
+    height: 'auto',
     position: 'fixed',
     left: 0,
     right: 0,
     top: 0,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
     background: theme.custom.bgColor,
     backdropFilter: 'blur(47.5px)',
+    borderTop: `1px solid ${theme.custom.blackColor}`,
+    borderBottom: `1px solid ${theme.custom.blackColor}`,
   },
   innerContainer: {
-    padding: '16px 70px',
+    width: '100%',
+    maxWidth: theme.maxWidth,
+    height: 'inherit',
+    maxHeight: '87px',
+    padding: theme.spacing(0, 16),
+    [theme.breakpoints.down('md')]: {
+      padding: theme.spacing(0, 4),
+    },
+  },
+  menuContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    flexWrap: 'nowrap',
+    [theme.breakpoints.down('md')]: {
+      justifyContent: 'flex-start',
+    },
+  },
+  hamburgerMenuIcon: {
+    cursor: 'pointer',
   },
   logoContainer: {
-    textAlign: 'center',
+    height: '87px',
+    display: 'grid',
+    placeContent: 'center',
   },
   buttonsContainer: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-end',
     flexDirection: 'row',
-    border: '2px solid yellow',
+    flexWrap: 'nowrap',
+  },
+  searchBtn: {
+    marginRight: theme.spacing(1),
+  },
+  intlBox: {
+    [theme.breakpoints.down('md')]: {
+      display: 'none',
+    },
+  },
+  buttonBox: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    flexDirection: 'row',
+    flexWrap: 'nowrap',
+    [theme.breakpoints.down('md')]: {
+      display: 'none',
+    },
+  },
+  linksContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    [theme.breakpoints.down('md')]: {
+      display: 'none',
+    },
   },
   links: {
-    textDecoration: 'none',
-    color: '#000',
-    padding: '0 16px',
+    display: 'inline-block',
+    height: '87px',
+    lineHeight: '87px',
+    span: {
+      display: 'inline-block',
+      height: '100%',
+      padding: theme.spacing(0, 4),
+      color: theme.custom.blackColor,
+    },
   },
-
+  addBlueBgColor: {
+    backgroundColor: theme.custom.blueBgColor,
+  },
+  addPinkBgColor: {
+    backgroundColor: theme.custom.pinkBgColor,
+  },
   DrawerContainer: {
     position: 'fixed',
     top: 0,
@@ -38,7 +103,7 @@ const useStyles = makeStyles()((theme) => ({
     right: 0,
     width: '100vw',
     height: '100vh',
-    padding: '0 1rem',
+    padding: theme.spacing(0, 4),
     color: theme.custom.lightFont,
     backgroundColor: theme.custom.blackColor,
   },
@@ -49,8 +114,34 @@ const useStyles = makeStyles()((theme) => ({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    padding: '2rem 2rem 0 2rem',
+    padding: theme.spacing(8),
+    paddingBottom: 0,
     borderBottom: `1px solid ${theme.custom.whiteColor}`,
+  },
+  donateBtn: {
+    fontFamily: 'Nunito Sans',
+    fontStyle: 'normal',
+    fontWeight: 700,
+    textAlign: 'center',
+    marginLeft: theme.spacing(4),
+    color: theme.custom.lightFont,
+    backgroundColor: theme.custom.blackColor,
+    ':hover': {
+      background: theme.custom.blackColor,
+    },
+  },
+  cardBorder: {
+    border: 'none',
+    borderBottom: '1px solid black',
+    borderRight: '1px solid black',
+  },
+  getHelpBtn: {
+    width: 'fit-content',
+    minWidth: 176,
+    height: 50,
+    paddingTop: theme.spacing(3),
+    backgroundColor: theme.custom.blackColor,
+    color: theme.custom.lightFont,
   },
 }))
 

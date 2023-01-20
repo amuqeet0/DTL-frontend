@@ -10,7 +10,7 @@ const useStyles = makeStyles()((theme) => ({
     height: '200vh',
     paddingTop: '200px',
     marginTop: '200px',
-    background: theme.custom.sec,
+    background: theme.palette.primary.main,
   },
 }))
 
